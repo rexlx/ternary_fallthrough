@@ -35,7 +35,7 @@ def sum_ch(word, ch_map, val):
             continue
         else:
             score.append(ch_map[i])
-    # here we now have to test the value
+    # here we now have to test the value (if the line said False, instead)
     if val and sum(score) == val:
         matches.append(word)
 
