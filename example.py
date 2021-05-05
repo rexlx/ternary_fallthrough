@@ -17,6 +17,7 @@ def get_args():
         val = int(sys.argv[1]) if int(sys.argv[1]) else fallthrough # <- this would drop to the next condition
     else:                                                           #    ultimately saving a test down around line 40
         print("expected a number as an arg")
+        exit(1)
     return val
 
 def read_file(file="/Users/rexfitzhugh/bin/data/words"):
