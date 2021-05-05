@@ -14,6 +14,7 @@ def gen_map():
 
 def get_args():
     if len(sys.argv) > 1:
+        # val = int(sys.argv[1]) if int(sys.argv[1]) else False
         val = int(sys.argv[1]) if int(sys.argv[1]) else fallthrough # <- this would drop to the next condition
     else:                                                           #    ultimately saving a test down around line 40
         print("expected a number as an arg")
@@ -36,7 +37,9 @@ def sum_ch(word, ch_map, val):
             continue
         else:
             score.append(ch_map[i])
-    # here we now have to test the value (if the line said False, instead)
+    # if we had done a traditional ternary operation, we
+    # would have written "else False", which woukd require this
+    # additional logic.
     if val and sum(score) == val:
         matches.append(word)
 
