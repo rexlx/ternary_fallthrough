@@ -14,9 +14,11 @@ def gen_map():
 
 def get_args():
     if len(sys.argv) > 1:
+        # traditional
         # val = int(sys.argv[1]) if int(sys.argv[1]) else False
+        # it reads: try and convert to int if you can, if you cant, dont.
         val = int(sys.argv[1]) if int(sys.argv[1]) else fallthrough # <- this would drop to the next condition
-    else:                                                           #    ultimately saving a test down around line 40
+    else:
         print("expected a number as an arg")
         exit(1)
     return val
