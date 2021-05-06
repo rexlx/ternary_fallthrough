@@ -40,7 +40,7 @@ def sum_ch(word, ch_map, val):
         else:
             score.append(ch_map[i])
     # if we had done a traditional ternary operation, we
-    # would have written "else False", which woukd require this
+    # would have written "else False", which would require this
     # additional logic.
     if val and sum(score) == val:
         matches.append(word)
