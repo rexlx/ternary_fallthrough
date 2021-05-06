@@ -2,7 +2,7 @@ import string
 import sys
 
 
-matches= []
+matches = []
 
 
 def gen_map():
